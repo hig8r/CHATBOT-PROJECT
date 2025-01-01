@@ -1,0 +1,55 @@
+# Página: Smart Kiosk
+@app.route("/Smart_Kiosk")
+def smart_kiosk():
+    return """
+    <h1>Suporte para Smart Kiosk</h1>
+    <p>Selecione a opção de suporte necessária:</p>
+    <ol>
+        <li><a href="/Criacao_QR_Code">Criação de QR Code</a></li>
+        <li><a href="/Erro_Sincronizacao">Erro de Sincronização</a></li>
+        <li><a href="/Instalacao_APK">Instalação de Aplicativo (APK)</a></li>
+        <li><a href="/Duvidas_Geral_SK">Dúvidas em Geral</a></li>
+    </ol>
+    """
+
+# Página: Criação de QR Code
+@app.route("/Criacao_QR_Code")
+def criacao_qr_code():
+    return """
+    <h1>Criação de QR Code</h1>
+    <p>Para assistência na criação de QR Codes, por favor, preencha o formulário para falar com um de nossos atendentes:</p>
+    <p><a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Formulário de Atendimento</a></p>
+    """
+
+# Página: Erro de Sincronização
+@app.route("/Erro_Sincronizacao")
+def erro_sincronizacao():
+    return """
+    <h1>Erro de Sincronização</h1>
+    <p>Para solucionar problemas de sincronização, por favor, preencha o formulário para receber suporte de um de nossos atendentes:</p>
+    <p><a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Formulário de Atendimento</a></p>
+    """
+
+# Página: Instalação de Aplicativo (APK)
+@app.route("/Instalacao_APK")
+def instalacao_apk():
+    return """
+    <h1>Instalação de Aplicativo (APK)</h1>
+    <p>Para instalar um aplicativo (APK) em seu Smart Kiosk, siga estas etapas padrão para dispositivos Android:</p>
+    <ol>
+        <li>Baixe o arquivo APK para o dispositivo.</li>
+        <li>Vá para as configurações do dispositivo e ative a opção "Instalar de fontes desconhecidas" em Segurança.</li>
+        <li>Localize o arquivo APK no gerenciador de arquivos do dispositivo e toque nele para iniciar a instalação.</li>
+        <li>Siga as instruções na tela para concluir a instalação.</li>
+        <li>Após a instalação, desative a opção "Instalar de fontes desconhecidas" para proteger seu dispositivo.</li>
+    </ol>
+    """
+
+# Página: Dúvidas em Geral
+@app.route("/Duvidas_Geral_SK")
+def duvidas_geral_sk():
+    return """
+    <h1>Dúvidas em Geral</h1>
+    <p>Se tiver dúvidas gerais sobre o Smart Kiosk, por favor, preencha o formulário para falar com um atendente:</p>
+    <p><a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Formulário de Atendimento</a></p>
+    """
