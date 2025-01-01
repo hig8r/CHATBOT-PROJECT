@@ -1,0 +1,89 @@
+# Página: Impressoras
+@app.route("/Impressoras")
+def impressoras():
+    return """
+    <h1>Suporte para Impressoras</h1>
+    <p>Selecione o modelo da sua impressora:</p>
+    <ol>
+        <li><a href="/G250">G250</a></li>
+        <li><a href="/G250W">G250W</a></li>
+    </ol>
+    """
+
+# Página: G250
+@app.route("/G250")
+def g250():
+    return """
+    <h1>G250</h1>
+    <p>Selecione o tipo de configuração ou problema:</p>
+    <ol>
+        <li><a href="/Ajuda_Configuracao">Ajuda na Configuração</a></li>
+        <li><a href="/Nao_Imprime">Não Imprime</a></li>
+        <li><a href="/Nao_Liga_Impressora">Não Liga</a></li>
+    </ol>
+    """
+
+# Página: G250W
+@app.route("/G250W")
+def g250w():
+    return """
+    <h1>G250W</h1>
+    <p>Este modelo inclui opções adicionais de configuração via Wi-Fi.</p>
+    <ol>
+        <li><a href="/Ajuda_Configuracao_WiFi">Configuração via Wi-Fi</a></li>
+        <li><a href="/Configuracao_Adicional_G250">Configuração Adicional</a></li>
+        <li><a href="/Nao_Imprime">Não Imprime</a></li>
+        <li><a href="/Nao_Liga_Impressora">Não Liga</a></li>
+    </ol>
+    <p>Consulte o artigo detalhado sobre configuração Wi-Fi: <a href="https://gertec.atlassian.net/plugins/servlet/servicedesk/customer/confluence/shim/spaces/STG/pages/57943879498017746/Configurando+a+rede+Wifi+com+a+G250W">Configurar Wi-Fi com a G250W</a>.</p>
+    """
+
+# Página: Ajuda na Configuração
+@app.route("/Ajuda_Configuracao")
+def ajuda_configuracao():
+    return """
+    <h1>Ajuda na Configuração</h1>
+    <p>Para configurar sua impressora, siga as instruções do manual específico do seu modelo. Caso continue com dúvidas, você pode falar com um atendente preenchendo este <a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">formulário</a>.</p>
+    <ul>
+        <li><a href="https://www.gertec.com.br/nossas-politicas/#conserto">AT Matriz</a></li>
+        <li><a href="https://www.gertec.com.br/encontre-uma-assistencia-tecnica/">AT próximas ao cliente</a></li>
+        <li><a href="https://www.gertec.com.br/wp-content/uploads/2022/07/Principais-Erros_politica-de-envio-para-conserto.pdf">Para evitar erros no envio</a></li>
+    </ul>
+    """
+
+# Página: Configuração via Wi-Fi para G250W
+@app.route("/Ajuda_Configuracao_WiFi")
+def ajuda_configuracao_wifi():
+    return """
+    <h1>Configuração via Wi-Fi para G250W</h1>
+    <p>Para configurar a rede Wi-Fi da sua G250W, siga as instruções detalhadas neste <a href="https://gertec.atlassian.net/plugins/servlet/servicedesk/customer/confluence/shim/spaces/STG/pages/57943879498017746/Configurando+a+rede+Wifi+com+a+G250W">artigo</a>.</p>
+    """
+
+# Página: Configuração Adicional para G250
+@app.route("/Configuracao_Adicional_G250")
+def configuracao_adicional_g250():
+    return """
+    <h1>Configuração Adicional para G250</h1>
+    <p>Para ajustes adicionais na configuração da G250, consulte o manual do usuário ou entre em contato com o suporte técnico se necessário.</p>
+    """
+
+# Página: Não Imprime
+@app.route("/Nao_Imprime")
+def nao_imprime():
+    return """
+    <h1>Não Imprime</h1>
+    <p>Verifique se a bobina está de acordo com este <a href="https://gertec.atlassian.net/wiki/spaces/STG/pages/57943879498017118/Ligando+sua+Impressora+t+rmica+G250+G250W?parentProduct=JSM-Portal&parentProductContentContainerId=11362&initialAllowedFeatures=disable-login-flow.disable-share&locale=pt-BR#Instala%C3%A7%C3%A3o-de-bobina-de-papel">artigo</a>. Realize um teste de impressão. Caso funcione, ótimo! Se não, envie um vídeo como evidência e preencha este <a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">formulário</a> para ser direcionado a um atendente.</p>
+    """
+
+# Página: Não Liga
+@app.route("/Nao_Liga_Impressora")
+def nao_liga_impressora():
+    return """
+    <h1>Não Liga</h1>
+    <p>Infelizmente, não conseguimos resolver remotamente. Consulte nosso <a href="https://gertec.atlassian.net/servicedesk/customer/article/57943879498017118">artigo de suporte</a> para detalhes sobre como ligar o equipamento. Para assistência adicional, encaminhe o equipamento para assistência técnica.</p>
+    <ul>
+        <li><a href="https://www.gertec.com.br/nossas-politicas/#conserto">AT Matriz</a></li>
+        <li><a href="https://www.gertec.com.br/encontre-uma-assistencia-tecnica/">AT próximas ao cliente</a></li>
+        <li><a href="https://www.gertec.com.br/wp-content/uploads/2022/07/Principais-Erros_politica-de-envio-para-conserto.pdf">Para evitar erros no envio</a></li>
+    </ul>
+    """
