@@ -9,8 +9,25 @@ def home():
     <h1>Bem-vindo ao Chatbot de Suporte Técnico!</h1>
     <p>Como podemos te ajudar hoje? Escolha a categoria do seu equipamento:</p>
     <ol>
+       <li><a href="/Automação_Comercial">Automação Comercial</a></li>
        <li><a href="/Meios_de_Pagamentos">Meios de Pagamento (SmartPOS, MPOS, POS, PIN Pad)</a></li>
-       <li><a href="/Outros">Outros</a></li>
+    </ol>
+    """
+# Página: Automação Comercial
+@app.route("/Automação_Comercial")
+def automacao_comercial():
+    return """
+    <h1>Automação Comercial</h1>
+    <p>Escolha o modelo do equipamento:</p>
+    <ol>
+        <li><a href="/Impressoras">Impressora</a></li>
+        <li><a href="/Microterminal">Microterminal</a></li>
+        <li><a href="/Smart_Kiosk">Smart Kiosk</a></li>
+        <li><a href="/Smart_PDV">Smart PDV</a></li>
+        <li><a href="/Terminais_Consulta">Terminais de Consulta</a></li>
+        <li><a href="/Terminais_Smart">Terminais Smart</a></li>
+        <li><a href="/Teclado_PDV">Teclado PDV</a></li>
+        <li><a href="/Solucoes_Fiscais">Soluções Fiscais</a></li>
     </ol>
     """
 
