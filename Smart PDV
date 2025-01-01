@@ -1,0 +1,91 @@
+# Página: Smart PDV
+@app.route("/Smart_PDV")
+def smart_pdv():
+    return """
+    <h1>Suporte para Smart PDV</h1>
+    <p>Selecione o seu equipamento:</p>
+    <ol>
+        <li><a href="/GBOT">GBOT</a></li>
+        <li><a href="/GS300">GS300</a></li>
+    </ol>
+    """
+
+# Página: GBOT
+@app.route("/GBOT")
+def gbot():
+    return """
+    <h1>GBOT</h1>
+    <p>Aprenda mais sobre o seu GBOT:</p>
+    <ul>
+        <li><a href="https://gertec.atlassian.net/plugins/servlet/servicedesk/customer/confluence/shim/spaces/STG/pages/57943879498019600/Ligando+seu+GBOT">Ligando seu GBOT</a></li>
+        <li><a href="https://gertec.atlassian.net/plugins/servlet/servicedesk/customer/confluence/shim/spaces/STG/pages/57943879498019728/Atualizando+seu+GBOT">Atualizando seu GBOT</a></li>
+        <li><a href="https://gertec.atlassian.net/plugins/servlet/servicedesk/customer/confluence/shim/spaces/STG/pages/57943879498019907/Configurando+seu+GBOT">Configurando seu GBOT</a></li>
+        <li><a href="https://gertec.atlassian.net/plugins/servlet/servicedesk/customer/confluence/shim/spaces/STG/pages/57943879498020136/Problemas+comuns+do+GBOT">Problemas comuns do GBOT</a></li>
+    </ul>
+    <p>Desejo relatar um problema específico:</p>
+    <ul>
+        <li><a href="/Nao_Liga_GBOT">Não Liga</a></li>
+        <li><a href="/Nao_Realiza_Vendas">Não Realiza Vendas</a></li>
+        <li><a href="/Criacao_QR_Code_GBOT">Criação do QR Code</a></li>
+        <li><a href="/Erro_Sincronizacao_GBOT">Erro de Sincronização</a></li>
+        <li><a href="/Postagem_Aplicativo_MDM">Postagem de Aplicativo (MDM)</a></li>
+    </ul>
+    """
+
+# Página: GS300
+@app.route("/GS300")
+def gs300():
+    return """
+    <h1>GS300</h1>
+    <p>Para suporte sobre o GS300, por favor, entre em contato com nossos atendentes:</p>
+    <p><a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Formulário de Atendimento</a></p>
+    """
+
+# Página: Não Liga
+@app.route("/Nao_Liga_GBOT")
+def nao_liga_gbot():
+    return """
+    <h1>GBOT - Não Liga</h1>
+    <p>Infelizmente, não conseguimos resolver remotamente. Recomendamos enviar o equipamento para assistência técnica. Consulte nosso <a href="https://gertec.atlassian.net/servicedesk/customer/article/57943879498017118">artigo de suporte</a> para mais detalhes.</p>
+    <ul>
+        <li><a href="https://www.gertec.com.br/nossas-politicas/#conserto">AT Matriz</a></li>
+        <li><a href="https://www.gertec.com.br/encontre-uma-assistencia-tecnica/">AT próximas ao cliente</a></li>
+        <li><a href="https://www.gertec.com.br/wp-content/uploads/2022/07/Principais-Erros_politica-de-envio-para-conserto.pdf">Para evitar erros no envio</a></li>
+    </ul>
+    """
+
+# Página: Não Realiza Vendas
+@app.route("/Nao_Realiza_Vendas")
+def nao_realiza_vendas():
+    return """
+    <h1>GBOT - Não Realiza Vendas</h1>
+    <p>Por favor, verifique com o seu PDV se há algum problema relacionado ao sistema de vendas, pois nós, como fabricantes, não temos controle sobre este aspecto. Caso deseje, preencha o formulário e aguarde até 4 horas para que o operador responsável entre em contato.</p>
+    <p><a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Formulário de Atendimento</a></p>
+    """
+
+# Página: Criação do QR Code
+@app.route("/Criacao_QR_Code_GBOT")
+def criacao_qr_code_gbot():
+    return """
+    <h1>GBOT - Criação do QR Code</h1>
+    <p>Para assistência na criação de QR Codes, preencha o formulário para falar com um de nossos atendentes:</p>
+    <p><a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Formulário de Atendimento</a></p>
+    """
+
+# Página: Erro de Sincronização
+@app.route("/Erro_Sincronizacao_GBOT")
+def erro_sincronizacao_gbot():
+    return """
+    <h1>GBOT - Erro de Sincronização</h1>
+    <p>Para resolver problemas de sincronização, preencha o formulário para receber suporte de um de nossos atendentes:</p>
+    <p><a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Formulário de Atendimento</a></p>
+    """
+
+# Página: Postagem de Aplicativo (MDM)
+@app.route("/Postagem_Aplicativo_MDM")
+def postagem_aplicativo_mdm():
+    return """
+    <h1>GBOT - Postagem de Aplicativo (MDM)</h1>
+    <p>Para assistência na postagem de aplicativos via MDM, preencha o formulário para suporte de um atendente:</p>
+    <p><a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Formulário de Atendimento</a></p>
+    """
