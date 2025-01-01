@@ -1,0 +1,84 @@
+# Página: Microterminal
+@app.route("/Microterminal")
+def microterminal():
+    return """
+    <h1>Suporte para Microterminal</h1>
+    <p>Selecione o modelo do seu equipamento:</p>
+    <ol>
+        <li><a href="/MT720">MT-720</a></li>
+        <li><a href="/MT721">MT-721</a></li>
+        <li><a href="/MT740">MT-740</a></li>
+    </ol>
+    """
+
+# Função auxiliar para criar conteúdo repetido
+def microterminal_options():
+    return """
+    <h2>Selecione o problema enfrentado:</h2>
+    <ol>
+        <li><a href="/Nao_Liga_MT">Não Liga</a></li>
+        <li><a href="/Comunicacao_Balanca">Comunicação com a Balança</a></li>
+        <li><a href="/Configuracao_MT">Configuração</a></li>
+        <li><a href="/Falha_Teclas">Falha nas Teclas</a></li>
+    </ol>
+    """
+
+# Páginas para cada modelo
+@app.route("/MT720")
+def mt720():
+    return f"<h1>MT-720</h1>{microterminal_options()}"
+
+@app.route("/MT721")
+def mt721():
+    return f"<h1>MT-721</h1>{microterminal_options()}"
+
+@app.route("/MT740")
+def mt740():
+    return f"<h1>MT-740</h1>{microterminal_options()}"
+
+# Página: Não Liga
+@app.route("/Nao_Liga_MT")
+def nao_liga_mt():
+    return """
+    <h1>Não Liga</h1>
+    <p>Recomendamos enviar o equipamento para assistência técnica.</p>
+    <ul>
+        <li><a href="https://www.gertec.com.br/nossas-politicas/#conserto">AT Matriz</a></li>
+        <li><a href="https://www.gertec.com.br/encontre-uma-assistencia-tecnica/">AT próximas ao cliente</a></li>
+        <li><a href="https://www.gertec.com.br/wp-content/uploads/2022/07/Principais-Erros_politica-de-envio-para-conserto.pdf">Para evitar erros no envio</a></li>
+    </ul>
+    """
+
+# Página: Comunicação com a Balança
+@app.route("/Comunicacao_Balanca")
+def comunicacao_balanca():
+    return """
+    <h1>Comunicação com a Balança</h1>
+    <p>Esta configuração não é realizada por nós. Entre em contato com o suporte do PDV. Entretanto, esta comunicação geralmente requer:</p>
+    <ul>
+        <li>Verificação das configurações de porta e velocidade de comunicação;</li>
+        <li>Conexões físicas adequadas entre os dispositivos;</li>
+        <li>Compatibilidade de software entre a balança e o terminal.</li>
+    </ul>
+    """
+
+# Página: Configuração
+@app.route("/Configuracao_MT")
+def configuracao_mt():
+    return """
+    <h1>Configuração</h1>
+    <h2>Escolha o tipo de configuração:</h2>
+    <ul>
+        <li>Terminal - <a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Fale com um atendente</a></li>
+        <li>Balança - Esta configuração é externa e deve ser realizada pelo suporte da balança.</li>
+    </ul>
+    """
+
+# Página: Falha nas Teclas
+@app.route("/Falha_Teclas")
+def falha_teclas():
+    return """
+    <h1>Falha nas Teclas</h1>
+    <p>Para resolver problemas de falha nas teclas, por favor, preencha o formulário para falar com um de nossos atendentes:</p>
+    <p><a href="https://gertec.atlassian.net/servicedesk/customer/portal/22/group/52/create/309">Formulário de Atendimento</a></p>
+    """
